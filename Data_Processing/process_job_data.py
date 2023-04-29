@@ -17,7 +17,6 @@ df = pd.read_csv("/home/marcuswrrn/Projects/Semantic_Quantification/Semantic_Com
 jobs = df["Job_Titles"].to_list()
 
 
-
 # Generate Sentences
 
 prompts = [{"role": "user", "content": f"I am {get_article(job)} {job}"} for job in jobs]
