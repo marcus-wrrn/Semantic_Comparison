@@ -105,3 +105,9 @@ def denoise(data, wavelet='db4', level=None, threshold_type='soft'):
 
     return denoised_data
 
+def estimate_completion(iteration, total_iterations, start_time):
+    elapsed_time = time.time() - start_time
+    time_per_iteration = elapsed_time / iteration
+    remaining_iterations = total_iterations - iteration
+    estimated_completion_time = remaining_iterations * time_per_iteration
+    return estimated_completion_time
